@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta charset="utf-8">
+<title>Behavior-Driven Development with Behat &middot; Talk by Haralan Dobrev</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/reveal.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/theme/black.min.css">
+<meta name="description" content="Introductory talk about Behavior-Driven Development, Behat, Gherkin and communication between stakeholders and developers.">
+<meta name="author" content="Haralan Dobrev">
+<link rel="license" href="LICENSE">
+<link rel="author" href="mailto:harry@hkdobrev.com">
+<meta property="og:title" content="Behavior-Driven Development Talk by Haralan Dobrev">
+<meta property="og:type" content="article">
+<meta property="og:description" content="Introductory talk about Behavior-Driven Development, Behat, Gherkin and communication between stakeholders and developers.">
+<meta property="og:url" content="https://hkdobrev.com/behavior-driven-development-talk">
+<meta property="article:author" content="https://www.facebook.com/hkdobrev">
+<meta property="article:publisher" content="https://www.facebook.com/hkdobrev">
+<meta property="article:published_time" content="2017-06-21T19:00:00+02:00">
+<meta property="article:section" content="Talks">
+<meta property="og:locale" content="en_GB">
+<meta property="og:see_also" content="https://hkdobrev.com/">
+<meta property="og:see_also" content="https://hkdobrev.com/talks">
+<meta property="og:see_also" content="https://github.com/hkdobrev">
+<meta property="og:see_also" content="https://clippings.com">
+<meta property="fb:profile_id" content="hkdobrev">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@hkdobrev">
+<meta name="twitter:creator" content="@hkdobrev">
+<meta name="twitter:url" content="https://hkdobrev.com/behavior-driven-development-talk">
+<meta name="twitter:title" content="Behavior-Driven Development Talk by Haralan Dobrev">
+<meta name="twitter:description" content="Introductory talk about Behavior-Driven Development, Behat, Gherkin and communication between stakeholders and developers.">
+<style>
+    h1, h2, h3, h4, h5, h6 {
+        text-transform: none !important;
+    }
+    .slides > section > h1 > a,
+    .slides > section > h2 > a,
+    .slides > section > h3 > a,
+    .slides > section > h4 > a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .footer a:link, a:visited {
+        text-decoration: none;
+        color: rgb(77, 146, 255);
+    }
+
+    .footer a:hover {
+        color: rgba(77, 146, 255, 0.8);
+    }
+
+    .text-lower {
+        text-transform: lowercase !important;
+    }
+
+    .text-upper {
+        text-transform: uppercase !important;
+    }
+
+    .reveal section img {
+        border: 0;
+        box-shadow: none;
+    }
+</style>
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <section>
+            <h1>
+                Behavior-Driven Development
+            </h1>
+        </section>
+        <section>
+            <h2>
+                <a href="https://hkdobrev.com">Haralan Dobrev</a>
+            </h2>
+            <br>
+            <h3>
+                <a href="https://clippings.com">Clippings.com</a>
+            </h3>
+            <br>
+            <h3 class="text-lower">
+                <a href="https://twitter.com/hkdobrev">@hkdobrev</a>
+            </h3>
+        </section>
+        <section data-background-image="./clippings-background.jpg">
+            <h2>
+                <img src="./clippings_logo.svg" alt="Clippings logo" style="max-width: 25vw">
+            </h2>
+        </section>
+        <section>
+            <h2>Clippings</h2>
+            <br>
+            <h4 class="text-upper">Where Furniture and Technology Meet</h4>
+        </section>
+    </div>
+</div>
+<div class="footer js-sticky-slide-footer" style="position: fixed; bottom: 70px; right: 90px">
+    <a href="https://hkdobrev.com">
+        <h2 style="margin: 0">
+            @hkdobrev
+        </h2>
+    </a>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/classList.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/head.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/js/reveal.min.js"></script>
+<script>
+    Reveal.initialize({
+        history: true,
+        controls: false,
+        progress: false,
+    });
+    function hideStickyFooter(slideNumber) {
+        return slideNumer !== 1 && slideNumber < 4;
+    }
+
+    var footer = document.querySelector('.js-sticky-slide-footer');
+
+    if (hideStickyFooter(Reveal.getIndices().h)) {
+        footer.style.display = 'none';
+    }
+    Reveal.addEventListener('slidechanged', function(event) {
+        if (hideStickyFooter(event.indexh)) {
+            footer.style.display = 'none';
+        } else {
+            footer.style.display = 'block';
+        }
+    });
+</script>
+</body>
+</html>
