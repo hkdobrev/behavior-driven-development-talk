@@ -44,15 +44,6 @@ h1, h2, h3, h4, h5, h6 {
     color: inherit;
 }
 
-.footer a:link, a:visited {
-    text-decoration: none;
-    color: rgb(77, 146, 255);
-}
-
-.footer a:hover {
-    color: rgba(77, 146, 255, 0.8);
-}
-
 .text-lower {
     text-transform: lowercase !important;
 }
@@ -65,17 +56,26 @@ h1, h2, h3, h4, h5, h6 {
     border: 0;
     box-shadow: none;
 }
+
+.footer a:link, a:visited {
+    text-decoration: none;
+    color: rgb(114, 168, 255);
+}
+
+.footer a:hover {
+    color: rgba(147, 189, 255, 0.8);
+}
 </style>
 </head>
 <body>
 <div class="reveal">
     <div class="slides">
-        <section>
+        <section data-state="no-footer">
             <h1>
                 Behavior-Driven Development
             </h1>
         </section>
-        <section>
+        <section data-state="no-footer">
             <h2>
                 <a href="https://hkdobrev.com">Haralan Dobrev</a>
             </h2>
@@ -88,7 +88,7 @@ h1, h2, h3, h4, h5, h6 {
                 <a href="https://twitter.com/hkdobrev">@hkdobrev</a>
             </h3>
         </section>
-        <section data-background-image="./clippings-background.jpg">
+        <section data-background-image="./clippings-background.jpg" data-state="no-footer">
             <h2>
                 <img src="./clippings_logo.svg" alt="Clippings logo" style="max-width: 25vw">
             </h2>
@@ -115,22 +115,6 @@ h1, h2, h3, h4, h5, h6 {
         history: true,
         controls: false,
         progress: false,
-    });
-    function hideStickyFooter(slideNumber) {
-        return slideNumer !== 1 && slideNumber < 4;
-    }
-
-    var footer = document.querySelector('.js-sticky-slide-footer');
-
-    if (hideStickyFooter(Reveal.getIndices().h)) {
-        footer.style.display = 'none';
-    }
-    Reveal.addEventListener('slidechanged', function(event) {
-        if (hideStickyFooter(event.indexh)) {
-            footer.style.display = 'none';
-        } else {
-            footer.style.display = 'block';
-        }
     });
 </script>
 </body>
