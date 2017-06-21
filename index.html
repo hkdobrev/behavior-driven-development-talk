@@ -57,6 +57,24 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: none;
 }
 
+img {
+    background: none !important;
+}
+
+.reveal pre {
+    box-shadow: none;
+    font-size:  0.9em;
+    width: 100%;
+}
+
+.footer {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.no-footer .footer {
+    opacity: 0;
+}
+
 .footer a:link, a:visited {
     text-decoration: none;
     color: rgb(114, 168, 255);
@@ -97,6 +115,62 @@ h1, h2, h3, h4, h5, h6 {
             <h2>Clippings</h2>
             <br>
             <h4 class="text-upper">Where Furniture and Technology Meet</h4>
+        </section>
+        <section style="position: relative;">
+            <img src="./developer-relations.svg" alt="Developers, Stakeholders and Product owner interacting">
+            <h2 class="fragment fade-in" style="position: absolute; top: 33%; left: 44%">BDD</h2>
+        </section>
+        <section>
+            <h2>BDD&nbsp;&harr;&nbsp;common&nbsp;language</h2>
+        </section>
+        <section>
+            <img src="./gherkins.png" alt="Two gherkins (vegetables) on top of each other" style="width: 10vw; position: absolute; right: 10vw;">
+            <h2>Gherkin</h2>
+            <h3 class="fragment fade-in">
+                Structured language
+            </h3>
+            <h3 class="fragment fade-in">
+                Describe feature and scenarios
+            </h3>
+        </section>
+        <section>
+            <pre><code class="gherkin">
+<b>Feature</b>: Win Game of Thrones
+
+  <span class="fragment fade-in"><b>In order to</b> win the game of thrones</span>
+
+  <span class="fragment fade-in"><b>As a</b> player</span>
+
+  <span class="fragment fade-in"><b>I need to</b> capture the Iron Throne</span>
+            </code></pre>
+        </section>
+        <section>
+            <pre><code class="gherkin">
+<b>Scenario</b>: Dragons fighting soldiers
+
+  <span class="fragment fade-in"><b>Given</b> I have 3 dragons
+  <b>And</b> I fight against 1,000 soliders</span>
+
+  <span class="fragment fade-in"><b>When</b> the dragons breathe fire</span>
+
+  <span class="fragment fade-in"><b>Then</b> 800 soldiers would die</span>
+            </code></pre>
+        </section>
+        <section>
+            <h2>BDD&nbsp;&harr;&nbsp;common&nbsp;language</h2>
+            <h3 class="fragment fade-in">
+                Business-readable, domain-specific
+            </h3>
+        </section>
+        <section data-background-image="./dragon-breathing-fire.jpg" data-state="no-footer">
+            <h2 style="display: inline-block; padding: 20px; background-color: rgba(0, 0, 0, 0.15); border-radius: 15px; box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.3)">
+                Let there be dragons
+            </h2>
+        </section>
+        <section>
+            <h2>
+                Unit tests for your user stories
+            </h2>
         </section>
     </div>
 </div>
